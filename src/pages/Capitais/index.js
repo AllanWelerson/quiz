@@ -68,14 +68,14 @@ export default function Capitais() {
 
   useEffect(() => {  
     if(config.state === 1){
-      if(seconds < 50){
+      if(seconds < 240){
         let interval = setInterval(() => {
           setSeconds(seconds => seconds + 1);
         }, 1000);
         return () => clearInterval(interval);
       }
 
-      if(seconds === 50){
+      if(seconds === 240){
         config.state = 2;
         setConfig(config);
         setText("End Game");
